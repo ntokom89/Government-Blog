@@ -1,0 +1,17 @@
+<div *ngFor="let post of posts">
+    <div class="grid-12 region region-content equal-height-element" id="region-content">
+        <div class="region-inner region-content-inner">
+            <h1 class="title" id="title">{{ post.name }}</h1>
+            <h5 class="ID" id="ID"> ID : {{ post.id }}</h5>
+            <div class="content clearfix">
+                <div class="field-items">
+                    <div class="field-item even" property="content:encoded">
+                        <h3>{{post.description}}</h3>
+                        <p>{{ post.content }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button (click)="ondelete(post._id)">Delete</button>
+</div>

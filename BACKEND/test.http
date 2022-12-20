@@ -1,0 +1,57 @@
+GET http://localhost:3000/api HTTP/1.1
+########
+GET https://localhost:3000/api/posts HTTP/1.1
+#######
+GET https://localhost:3000/api HTTP/1.1
+#########
+DELETE https://localhost:3000/api/posts/63319e0711468077bed8c9bf HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxMjM1IiwidXNlcmlkIjoiNjM0MTAzYzY1OTVhNGQwM2M5YTEzYmNhIiwiaWF0IjoxNjY1MjE1OTIyLCJleHAiOjE2NjUyMTk1MjJ9.jLDJy5fFKAPPutyODQckytaviit2Y2Gi3cRRv_x6h3M
+##########
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+
+{
+    "id": "34",
+ "name": "Cybernetics",
+ "description": "Short Post",
+ "content":"This post is about the Cybernetics and integration"
+}
+
+################################
+POST https://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username" : "test1235",
+    "password" : "hoffman12"
+}
+
+#########
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+ "username": "test123",
+ "password": "hoffman"
+}
+
+#########
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username" : "test1235",
+    "password" : "hoffman12"
+}
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxMjM1IiwidXNlcmlkIjoiNjM0MTAzYzY1OTVhNGQwM2M5YTEzYmNhIiwiaWF0IjoxNjY1MjE1OTIyLCJleHAiOjE2NjUyMTk1MjJ9.jLDJy5fFKAPPutyODQckytaviit2Y2Gi3cRRv_x6h3M
+
+{
+ "id": "36",
+ "name": "Car manufacturing",
+ "description": "Long Post",
+ "content":"This post is about the Car Manufacturer in SA"
+}
+###
